@@ -1,0 +1,9 @@
+.label {
+  display: inline-block;
+  background-color: var(--color-black);
+  color: white;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  padding: 0 var(--spacing-2);
+  text-transform: lowercase;
+}

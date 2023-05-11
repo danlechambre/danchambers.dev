@@ -1,0 +1,32 @@
+.nav-link-container {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+}
+
+.nav-link {
+  padding: var(--spacing-1);
+}
+
+.truncate-txt {
+  max-width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.txt-white {
+  color: white;
+}
+
+.txt-black {
+  color: black;
+}

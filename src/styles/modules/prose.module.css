@@ -1,0 +1,125 @@
+.prose ol,
+.prose ul {
+  margin-left: var(--spacing-5);
+}
+
+.prose ul > li,
+.prose ol > li {
+  position: relative;
+}
+
+.prose ol {
+  counter-reset: li;
+}
+
+.prose ol > li:before {
+  content: counter(li) ".";
+  counter-increment: li;
+  position: absolute;
+  color: var(--color-tertiary);
+  margin-left: calc(-1 * var(--spacing-5));
+}
+
+.prose ul > li:before {
+  position: absolute;
+  top: 0.45rem;
+  margin-left: calc(-1 * var(--spacing-3));
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid var(--color-tertiary);
+}
+
+.prose a {
+  color: var(--color-tertiary);
+  text-decoration: underline;
+  text-decoration-color: rgb(var(--color-tertiary-rgb), var(--opacity-50));
+  text-decoration-thickness: 2px;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 200ms;
+}
+
+.prose a:hover {
+  text-decoration-color: var(--color-tertiary);
+}
+
+.prose li {
+  margin-bottom: var(--spacing-3);
+}
+
+.prose blockquote,
+.prose body,
+.prose dd,
+.prose dl,
+.prose figure,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose hr,
+.prose p {
+  margin-bottom: var(--spacing-5);
+}
+
+.prose blockquote {
+  padding-left: var(--spacing-5);
+  border-left: 3px solid var(--color-tertiary);
+  font-style: italic;
+  color: var(--color-grey-1);
+}
+
+/* .prose code {
+  font-size: 0.85rem;
+}
+
+.prose p code {
+  display: inline-block;
+  background-color: rgb(242, 242, 242);
+  padding: 0 0.25rem;
+  border-radius: 3px;
+}
+
+.prose .code-title {
+  font-size: var(--font-size-sm);
+  display: inline-block;
+  background-color: var(--color-primary-darker);
+  box-shadow: 0px 0px 5px 0px rgb(var(--color-black-rgb)) inset;
+  border: 2px solid var(--color-primary);
+  padding: 0 8px 10px 8px;
+  margin-bottom: -12px;
+  border-radius: 10px 10px 0 0;
+  color: white;
+} */
+
+/* .pre-wrapper {
+  position: relative;
+  padding: var(--spacing-3) var(--spacing-5);
+  box-sizing: border-box;
+  background: #0e1116;
+  background-clip: padding-box;
+  border: solid 2px transparent;
+  border-radius: 10px;
+  margin-bottom: var(--spacing-5);
+}
+
+.pre-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+} */

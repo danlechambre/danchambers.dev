@@ -1,0 +1,19 @@
+.article {
+  border: 1px dashed;
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex > .item {
+  margin-right: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.more-link {
+  display: inline-block;
+  margin-left: 10px;
+}
