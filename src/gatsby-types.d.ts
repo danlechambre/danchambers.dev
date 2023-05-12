@@ -1350,6 +1350,7 @@ type MdxFrontmatter = {
   readonly dateUpdated: Maybe<Scalars['Date']>;
   readonly hero_image: Maybe<File>;
   readonly hero_image_alt: Maybe<Scalars['String']>;
+  readonly inProgress: Maybe<Scalars['Boolean']>;
   readonly slug: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly title: Maybe<Scalars['String']>;
@@ -1376,6 +1377,7 @@ type MdxFrontmatterFieldSelector = {
   readonly dateUpdated: InputMaybe<FieldSelectorEnum>;
   readonly hero_image: InputMaybe<FileFieldSelector>;
   readonly hero_image_alt: InputMaybe<FieldSelectorEnum>;
+  readonly inProgress: InputMaybe<FieldSelectorEnum>;
   readonly slug: InputMaybe<FieldSelectorEnum>;
   readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
@@ -1386,6 +1388,7 @@ type MdxFrontmatterFilterInput = {
   readonly dateUpdated: InputMaybe<DateQueryOperatorInput>;
   readonly hero_image: InputMaybe<FileFilterInput>;
   readonly hero_image_alt: InputMaybe<StringQueryOperatorInput>;
+  readonly inProgress: InputMaybe<BooleanQueryOperatorInput>;
   readonly slug: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
@@ -1396,6 +1399,7 @@ type MdxFrontmatterSortInput = {
   readonly dateUpdated: InputMaybe<SortOrderEnum>;
   readonly hero_image: InputMaybe<FileSortInput>;
   readonly hero_image_alt: InputMaybe<SortOrderEnum>;
+  readonly inProgress: InputMaybe<SortOrderEnum>;
   readonly slug: InputMaybe<SortOrderEnum>;
   readonly tags: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
@@ -2596,7 +2600,7 @@ type ArticlePageQueryVariables = Exact<{
 }>;
 
 
-type ArticlePageQuery = { readonly mdx: { readonly frontmatter: { readonly title: string | null, readonly dateCreated: string | null, readonly hero_image_alt: string | null, readonly hero_image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null };
+type ArticlePageQuery = { readonly mdx: { readonly frontmatter: { readonly title: string | null, readonly dateCreated: string | null, readonly dateUpdated: string | null, readonly tags: ReadonlyArray<string | null> | null, readonly inProgress: boolean | null, readonly hero_image_alt: string | null, readonly hero_image: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 

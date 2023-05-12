@@ -9,6 +9,7 @@ import {
 } from "./Article.module.css";
 import NavLink from "@components/NavLink/NavLink";
 import { prose } from "@styles/modules/prose.module.css";
+import { getDateString } from "utils";
 
 interface Article {
   // id: string;
@@ -21,11 +22,6 @@ interface Article {
 
 interface ArticleProps {
   article: Article;
-}
-
-function getDateString(date: string) {
-  const dt = new Date(date);
-  return dt.toLocaleDateString();
 }
 
 const Article = ({ article }: any) => {
