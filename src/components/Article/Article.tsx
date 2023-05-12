@@ -8,7 +8,6 @@ import {
   moreLink,
 } from "./Article.module.css";
 import NavLink from "@components/NavLink/NavLink";
-import { prose } from "@styles/modules/prose.module.css";
 import { getDateString } from "utils";
 
 interface Article {
@@ -30,7 +29,7 @@ const Article = ({ article }: any) => {
       <h2>
         <Link to={`/writing/${article.slug}`}>{article.title}</Link>
       </h2>
-      <p className={`mb-3 ${prose}`}>
+      <p className="mb-3 prose">
         {article.excerpt}
         <span className={moreLink}>
           <Link to={`/writing/${article.slug}`}>read more</Link>

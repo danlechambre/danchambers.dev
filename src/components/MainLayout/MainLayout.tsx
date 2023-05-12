@@ -1,6 +1,5 @@
 import { Link, useStaticQuery, graphql } from "gatsby";
 import React from "react";
-import { bgDots } from "@styles/modules/global.module.css";
 import * as styles from "./MainLayout.module.css";
 import githubLogo from "@images/github-mark-white.svg";
 
@@ -32,7 +31,7 @@ const MainLayout = ({ pageTitle, children }: MainLayoutProps) => {
   return (
     <div className={styles.pageContainer}>
       <header className={styles.header}>
-        <div className={`${styles.headingContainer} ${bgDots}`}>
+        <div className={`${styles.headingContainer} bg-dots`}>
           <Link className={styles.headingText} to="/">
             Dan Chambers
           </Link>

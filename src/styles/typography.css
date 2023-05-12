@@ -1,0 +1,99 @@
+/* 
+==========
+Typography
+==========
+*/
+
+@font-face {
+  font-family: "MonoLisa";
+  src: url("/fonts/MonoLisaVariableNormal.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MonoLisa";
+  src: url("/fonts/MonoLisaVariableItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Reset, normalize, sensible defaults */
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "RubikVariable", system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: var(--font-weight-2);
+  line-height: inherit;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: "MonoLisa", ui-monospace, SFMono-Regular, Consolas,
+    "Liberation Mono", Menlo, monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-4);
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}

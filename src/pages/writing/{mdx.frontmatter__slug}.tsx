@@ -4,7 +4,6 @@ import MainLayout from "@components/MainLayout/MainLayout";
 import { Link, PageProps } from "gatsby";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { prose } from "@styles/modules/prose.module.css";
 import Label from "@components/Label/Label";
 import { getDateString } from "utils";
 
@@ -44,7 +43,7 @@ const ArticlePage = ({
           }
         />
       )} */}
-      <div className={prose}>{children}</div>
+      <div className="prose">{children}</div>
     </MainLayout>
   );
 };

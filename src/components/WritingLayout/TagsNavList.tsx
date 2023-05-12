@@ -1,5 +1,4 @@
 import React from "react";
-import { bgDots } from "@styles/modules/global.module.css";
 import {
   nav,
   navListHeader,
@@ -19,7 +18,7 @@ const TagsNavList = () => {
   `);
 
   return (
-    <nav className={`${nav} ${bgDots}`}>
+    <nav className={`${nav} bg-dots`}>
       <Link to={`/writing/tags`}>
         <h3 className={navListHeader}>Tags</h3>
       </Link>

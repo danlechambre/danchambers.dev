@@ -1,0 +1,59 @@
+/* 
+=====
+Color 
+=====
+*/
+
+/* Reset and normalise */
+body {
+  color: var(--color-black);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  background-color: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #999; /* 2 */
+}
+
+.txt-white {
+  color: white;
+}
+
+.txt-black {
+  color: rgb(var(--color-black-rgb));
+}
+
+.bg-primary {
+  background-color: rgb(var(--color-primary-rgb));
+}
+
+.bg-secondary {
+  background-color: rgb(var(--color-secondary-rgb));
+}
+
+.bg-tertiary {
+  background-color: rgb(var(--color-tertiary-rgb));
+}
+
+.bg-neutral-dark {
+  background-color: rgb(var(--color-black-rgb));
+}
