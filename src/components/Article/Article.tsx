@@ -17,6 +17,7 @@ interface Article {
   excerpt: string;
   dateCreated: string;
   dateUpdated?: string;
+  inProgress?: boolean;
 }
 
 interface ArticleProps {
@@ -45,6 +46,11 @@ const Article = ({ article }: any) => {
               </time>
             </Label>
           </li>
+          {article.inProgress && (
+            <li>
+              <Label variant="primaryCompliment">Still growing</Label>
+            </li>
+          )}
           {article.dateUpdated && (
             <li>
               <Label variant="primaryCompliment">

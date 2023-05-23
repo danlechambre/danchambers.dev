@@ -2663,7 +2663,7 @@ type WritingLayoutArticlesQuery = { readonly allMdx: { readonly nodes: ReadonlyA
 type WritingPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type WritingPageQuery = { readonly allMdx: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly dateCreated: string | null, readonly dateUpdated: string | null, readonly slug: string | null, readonly title: string | null, readonly tags: ReadonlyArray<string | null> | null } | null }> } };
+type WritingPageQuery = { readonly allMdx: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly dateCreated: string | null, readonly dateUpdated: string | null, readonly inProgress: boolean | null, readonly slug: string | null, readonly title: string | null, readonly tags: ReadonlyArray<string | null> | null } | null }> } };
 
 
 }

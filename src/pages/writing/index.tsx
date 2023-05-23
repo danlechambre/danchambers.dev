@@ -20,6 +20,7 @@ const WritingPage = ({ data }: PageProps<Queries.WritingPageQuery>) => {
                 title: node.frontmatter?.title ?? "",
                 dateCreated: node.frontmatter?.dateCreated ?? "",
                 dateUpdated: node.frontmatter?.dateUpdated ?? "",
+                inProgress: node.frontmatter?.inProgress ?? false,
                 excerpt: node.excerpt,
                 tags: node.frontmatter?.tags,
               }}
@@ -41,6 +42,7 @@ export const query = graphql`
         frontmatter {
           dateCreated
           dateUpdated
+          inProgress
           slug
           title
           tags
