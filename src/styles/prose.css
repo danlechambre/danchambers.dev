@@ -78,3 +78,8 @@ Prose - Styles for writing
   font-style: italic;
   color: var(--color-grey-1);
 }
+
+.prose h1 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-4);
+}
