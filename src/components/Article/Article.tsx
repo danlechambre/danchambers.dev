@@ -26,10 +26,10 @@ interface ArticleProps {
 const Article = ({ article }: any) => {
   return (
     <article className={articleClass}>
-      <h2>
+      <h2 className="font-xl font-bold mb-1">
         <Link to={`/writing/${article.slug}`}>{article.title}</Link>
       </h2>
-      <p className="mb-3 prose">
+      <p className="mb-5 prose">
         {article.excerpt}
         <span className={moreLink}>
           <Link to={`/writing/${article.slug}`}>read more</Link>
@@ -47,7 +47,7 @@ const Article = ({ article }: any) => {
           </li>
           {article.dateUpdated && (
             <li>
-              <Label>
+              <Label variant="primaryCompliment">
                 Pruned:{" "}
                 <time dateTime={article.dateUpdated}>
                   {getDateString(article.dateUpdated)}

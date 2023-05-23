@@ -46,6 +46,10 @@ textarea::placeholder {
   background-color: rgb(var(--color-primary-rgb));
 }
 
+.bg-primary-compliment {
+  background-color: var(--color-primary-compliment);
+}
+
 .bg-secondary {
   background-color: rgb(var(--color-secondary-rgb));
 }

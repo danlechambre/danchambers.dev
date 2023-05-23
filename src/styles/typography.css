@@ -97,3 +97,15 @@ h4 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
+
+.font-lg {
+  font-size: var(--font-size-lg);
+}
+
+.font-xl {
+  font-size: var(--font-size-xl);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-4);
+}

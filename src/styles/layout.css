@@ -88,6 +88,14 @@ progress {
   margin-bottom: var(--spacing-3);
 }
 
+.mb-4 {
+  margin-bottom: var(--spacing-4);
+}
+
+.mb-5 {
+  margin-bottom: var(--spacing-5);
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;

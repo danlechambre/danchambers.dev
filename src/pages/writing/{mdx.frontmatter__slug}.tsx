@@ -21,11 +21,13 @@ const ArticlePage = ({
 
   return (
     <MainLayout pageTitle={data.mdx?.frontmatter?.title ?? "Untitled"}>
-      <h1>{data.mdx?.frontmatter?.title}</h1>
-      <div className="mb-3 h-spacing-3">
-        {inProgress && <Label variant="tertiary">Still growing</Label>}
+      <h1 className="font-xl font-bold mb-3">{data.mdx?.frontmatter?.title}</h1>
+      <div className="mb-5 h-spacing-3">
         <Label>Planted: {pubDate}</Label>
-        {updated && <Label>Pruned: {updated}</Label>}
+        {inProgress && <Label variant="primaryCompliment">Still growing</Label>}
+        {updated && (
+          <Label variant="primaryCompliment">Pruned: {updated}</Label>
+        )}
         {data.mdx?.frontmatter?.tags?.map((tag) => (
           <Link to={`/writing/tags/${tag}`} key={tag}>
             <Label key={tag} variant="secondary">
