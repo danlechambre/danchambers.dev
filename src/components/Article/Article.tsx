@@ -27,7 +27,7 @@ interface ArticleProps {
 const Article = ({ article }: any) => {
   return (
     <article className={articleClass}>
-      <h2 className="font-xl font-bold mb-1">
+      <h2 className="font-lg font-bold mb-1">
         <Link to={`/writing/${article.slug}`}>{article.title}</Link>
       </h2>
       <p className="mb-5 prose">
@@ -67,11 +67,9 @@ const Article = ({ article }: any) => {
           <ul className={flex}>
             {article.tags.map((tag: string) => (
               <li className={item} key={`${tag}-nav-link`}>
-                <NavLink
-                  variant="secondary"
-                  path={`/writing/tags/${tag}`}
-                  label={tag}
-                />
+                <Label variant="secondary">
+                  <Link to={`/writing/tags/${tag}`}>{tag}</Link>
+                </Label>
               </li>
             ))}
           </ul>

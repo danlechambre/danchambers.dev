@@ -1,14 +1,7 @@
 import React from "react";
-import {
-  nav,
-  navListHeader,
-  navListLink,
-  navListItem,
-  bgPrimary,
-  txtWhite,
-} from "./WritingLayout.module.css";
+import { nav, navListHeader, navListItem } from "./WritingLayout.module.css";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import NavLink from "@components/NavLink/NavLink";
+import Label from "@components/Label/Label";
 
 const ArticleNavList = () => {
   const data: Queries.WritingLayoutArticlesQuery = useStaticQuery(graphql`
@@ -35,17 +28,11 @@ const ArticleNavList = () => {
       <ul>
         {data.allMdx?.nodes.map((node) => (
           <li key={node.frontmatter?.slug} className={`${navListItem}`}>
-            <NavLink
-              path={`/writing/${node.frontmatter?.slug}`}
-              label={node.frontmatter?.title ?? ""}
-              truncate
-            />
-            {/* <Link
-              className={`${navListLink} ${bgPrimary}`}
-              to={`/writing/${node.frontmatter?.slug}`}
-            >
-              {node.frontmatter?.title}
-            </Link> */}
+            <Label variant="primary" truncate>
+              <Link to={`/writing/${node.frontmatter?.slug}`}>
+                {node.frontmatter?.title ?? ""}
+              </Link>
+            </Label>
           </li>
         ))}
       </ul>
