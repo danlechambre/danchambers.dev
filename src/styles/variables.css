@@ -48,19 +48,19 @@ xl	1280px	@media (min-width: 1280px) { ... }
   --opacity-50: 0.5;
   --opacity-75: 0.75;
 
-  --type-ratio-sm: 1.125;
-  --type-ratio-md: 1.2;
-  --type-ratio-lg: 1.25;
-  --type-ratio-xl: 1.333;
+  /* --type-ratio-sm: 1.125; */
+  --type-ratio-sm: 1.2;
+  --type-ratio-md: 1.25;
+  --type-ratio-lg: 1.333;
 
-  --font-size-base: 1rem;
+  --font-size-base: 16px;
   --type-ratio: var(--type-ratio-sm);
 
   --font-size-sm: calc(var(--font-size-base) / var(--type-ratio));
   --font-size-md: calc(var(--font-size-base) * var(--type-ratio));
   --font-size-lg: calc(var(--font-size-md) * var(--type-ratio));
   --font-size-xl: calc(var(--font-size-lg) * var(--type-ratio));
-  --font-size-xxl: calc(var(--font-size-xl) * var(--type-ratio));
+  --font-size-xs: calc(var(--font-size-sm) / var(--type-ratio))
 
   --font-weight-1: 300;
   --font-weight-2: 400;
@@ -74,15 +74,18 @@ xl	1280px	@media (min-width: 1280px) { ... }
 @media (min-width: 640px) {
   :root {
     --type-ratio: var(--type-ratio-md);
+    /* --font-size-base: 20px; */
   }
 }
+
 @media (min-width: 768px) {
   :root {
-    --type-ratio: var(--type-ratio-lg);
+    --font-size-base: 18px;
   }
 }
+
 @media (min-width: 1024px) {
   :root {
-    --type-ratio: var(--type-ratio-xl);
+    --type-ratio: var(--type-ratio-lg);
   }
 }

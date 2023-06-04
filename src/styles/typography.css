@@ -23,15 +23,15 @@ Typography
 /* Reset, normalize, sensible defaults */
 
 html {
-  line-height: 1.5;
+  line-height: 1.7;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: "RubikVariable", system-ui, -apple-system, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-weight: var(--font-weight-2);
   line-height: inherit;
+  font-size: var(--font-size-base);
 }
 
 code,
@@ -64,12 +64,12 @@ textarea {
 }
 
 small {
-  font-size: 80%;
+  font-size: var(--font-size-sm);
 }
 
 sub,
 sup {
-  font-size: 75%;
+  font-size: var(--font-size-xs);
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -98,6 +98,14 @@ h4 {
   hyphens: auto;
 }
 
+.font-sm {
+  font-size: var(--font-size-sm);
+}
+
+.font-md {
+  font-size: var(--font-size-md);
+}
+
 .font-lg {
   font-size: var(--font-size-lg);
 }
@@ -108,4 +116,8 @@ h4 {
 
 .font-bold {
   font-weight: var(--font-weight-4);
+}
+
+.italic {
+  font-style: italic;
 }
