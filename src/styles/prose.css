@@ -83,3 +83,8 @@ Prose - Styles for writing
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-4);
 }
+
+.prose h2 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-3);
+}
