@@ -11,10 +11,6 @@ const slugs = [
     slug: "cv",
     outputFilename: "dan-chambers-cv",
   },
-  {
-    slug: "cv-contracts",
-    outputFilename: "dan-chambers-contracts-cv",
-  },
 ] as const;
 // ------
 
