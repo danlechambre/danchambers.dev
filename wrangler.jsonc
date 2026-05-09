@@ -13,7 +13,7 @@
   "workers_dev": false,
   "routes": [
     {
-      "pattern": "danlechambre.com",
+      "pattern": "danchambers.dev",
       "custom_domain": true,
     },
   ],
