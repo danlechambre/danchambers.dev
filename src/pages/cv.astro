@@ -19,24 +19,38 @@ const { bluesky, ...cMethods } = connectMethods;
 
 <Shell wrapperClass="prose-container">
   <h1 class="print-only">Dan Chambers</h1>
-  <p class="subtitle">Frontend Engineer</p>
-  <ul class="inline-separated-ul">
-    {
-      Object.values(cMethods).map((x) => (
+  <div class="flex-between">
+    <div>
+      <p class="subtitle">Frontend Engineer</p>
+      <ul class="inline-separated-ul">
+        {
+          Object.values(cMethods).map((x) => (
+            <li>
+              <a href={x.url} rel="nofollow noreferrer" set:text={x.label} />
+            </li>
+          ))
+        }
         <li>
-          <a href={x.url} rel="nofollow noreferrer" set:text={x.label} />
+          <a
+            href="https://www.google.com/maps/place/Hull/@53.7664144,-0.373185,13z"
+            rel="nofollow noreferrer"
+          >
+            Hull, UK
+          </a>
         </li>
-      ))
-    }
-    <li>
+      </ul>
+    </div>
+    <div>
       <a
-        href="https://www.google.com/maps/place/Hull/@53.7664144,-0.373185,13z"
-        rel="nofollow noreferrer"
+        class="button-link"
+        href={`/assets/pdf/dan-chambers-cv.pdf`}
+        download={"dan-chambers-cv.pdf"}
       >
-        Hull, UK
+        {"Download PDF"}
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
+
   <Fragment set:html={marked.parse(aboutContent.cv)} />
   <div class="callout">
     <h2>Core Skills</h2>
