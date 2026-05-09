@@ -209,8 +209,7 @@ h4 {
 /* Banner */
 #banner {
   width: 100%;
-  max-height: 125px;
-  aspect-ratio: 8 / 1;
+  height: min(125px, 12.5cqi);
 
   display: flex;
 
@@ -220,14 +219,14 @@ h4 {
 
 #banner-text {
   min-width: 0;
-  height: 100%;
   overflow: hidden;
 
   display: flex;
   flex: 1 1 auto;
   align-items: center;
 
-  padding-block-end: 4px;
+  padding-inline-start: var(--space-3xs);
+  padding-inline-end: var(--space-2xl);
 
   font-weight: 900;
 }
@@ -241,7 +240,6 @@ h4 {
 }
 
 #banner-logo {
-  height: 100%;
   aspect-ratio: 1 / 1;
 
   flex-shrink: 0;
