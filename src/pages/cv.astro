@@ -1,0 +1,79 @@
+---
+import { marked } from "marked";
+
+import Shell from "../components/Shell.astro";
+
+import { aboutContent } from "../content/about.ts";
+import { workExperienceData } from "../content/work-experience/work-experience";
+import { getDateText } from "../utils";
+import { skills } from "../content/skills";
+import { connectMethods } from "../content/connect";
+
+const localeOptions: Intl.DateTimeFormatOptions = {
+  month: "short",
+  year: "numeric",
+};
+
+const { bluesky, ...cMethods } = connectMethods;
+---
+
+<Shell wrapperClass="prose-container">
+  <h1 class="print-only">Dan Chambers</h1>
+  <p class="subtitle">Frontend Engineer</p>
+  <ul class="inline-separated-ul">
+    {
+      Object.values(cMethods).map((x) => (
+        <li>
+          <a href={x.url} rel="nofollow noreferrer" set:text={x.label} />
+        </li>
+      ))
+    }
+    <li>
+      <a
+        href="https://www.google.com/maps/place/Hull/@53.7664144,-0.373185,13z"
+        rel="nofollow noreferrer"
+      >
+        Hull, UK
+      </a>
+    </li>
+  </ul>
+  <Fragment set:html={marked.parse(aboutContent.cv)} />
+  <div class="callout">
+    <h2>Core Skills</h2>
+    <dl class="inline-dl">
+      {
+        skills.map((x) => (
+          <div>
+            <dt>{`${x.groupTitle}: `}</dt>
+            <dd>{x.skills.join(", ")}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+  <h2>Experience</h2>
+  {
+    workExperienceData.map((xp) => (
+      <>
+        <h3>
+          {xp.role}
+          {"at "}
+          <a href={xp.company.url} rel="nofollow noreferrer">
+            {xp.company.name}
+          </a>
+        </h3>
+        <p class="subheading">
+          {getDateText(xp.startDate, localeOptions)}
+          {" - "}
+          {xp.endDate ? getDateText(xp.endDate, localeOptions) : "Present"}
+          {xp.note ? `(${xp.note})` : null}
+        </p>
+        <ul>
+          {xp.highlights.map((h) => (
+            <li>{h.cvBullet}</li>
+          ))}
+        </ul>
+      </>
+    ))
+  }
+</Shell>

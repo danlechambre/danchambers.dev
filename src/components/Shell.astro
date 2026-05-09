@@ -1,0 +1,43 @@
+---
+import { Font } from "astro:assets";
+
+import "../styles/main.css";
+
+interface Props {
+  wrapperClass?: string;
+}
+
+const { wrapperClass } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Font cssVariable="--font-serif" preload />
+    <Font cssVariable="--font-sans" preload />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dan Chambers | Web Developer</title>
+  </head>
+  <body>
+    <div id="frame">
+      <header id="banner">
+        <div id="banner-text">
+          <svg viewBox="0 0 170 24" preserveAspectRatio="xMinYMid meet">
+            <text class="heading-text" x="2" y="21" font-size="24">
+              {"Dan Chambers"}
+            </text>
+          </svg>
+        </div>
+        <div id="banner-logo">
+          <div></div>
+        </div>
+      </header>
+      <main>
+        <div class:list={["main-wrapper", wrapperClass]}>
+          <slot />
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

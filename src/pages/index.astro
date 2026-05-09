@@ -1,12 +1,126 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dan Chambers | Web Developer</title>
-  </head>
-  <body>
-    <h1>Dan Chambers</h1>
-    <p>I'm a web developer based in the North of England.</p>
-  </body>
-</html>
+---
+import { marked } from "marked";
+
+import { aboutContent } from "../content/about.ts";
+
+import { workExperienceData } from "../content/work-experience/work-experience";
+import { connectMethods } from "../content/connect";
+import Shell from "../components/Shell.astro";
+
+const availableFrom = "2026-05-01";
+const availableFromDate = new Date(availableFrom);
+
+const localeOptions: Intl.DateTimeFormatOptions = {
+  month: "long",
+  year: "numeric",
+};
+
+const defaultAvailabilityText = `I'm available to hire from ${availableFromDate.toLocaleDateString(
+  "en-GB",
+  localeOptions,
+)}`;
+---
+
+<Shell>
+  <div>
+    <div class="section-card_buffer">
+      <section class="section-card">
+        <div class="section-card_inner">
+          <h2>About</h2>
+          <Fragment set:html={marked.parse(aboutContent.long)} />
+          <p>
+            <span
+              data-availability={availableFromDate.toISOString()}
+              set:text={defaultAvailabilityText}
+            />. If you're building something within the TypeScript ecosystem and
+            need someone who can hit the ground running, <a href="#connect"
+              >let's talk</a
+            >.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div>
+    <div class="section-card_buffer">
+      <section class="section-card">
+        <div class="section-card_inner">
+          <h2>Experience</h2>
+          {
+            workExperienceData.map((xp) => (
+              <>
+                <h3>
+                  {xp.role}
+                  {"at "}
+                  <a href={xp.company.url} rel="nofollow noreferrer">
+                    {xp.company.name}
+                  </a>
+                </h3>
+
+                <Fragment set:html={marked.parse(xp.description)} />
+
+                <div class="details-wrapper">
+                  {xp.highlights.map((h) => (
+                    <details name="experience-highlight">
+                      <summary>{h.title}</summary>
+                      <div class="inner-details">
+                        <Fragment
+                          set:html={marked.parse(h.description ?? h.cvBullet)}
+                        />
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+  <div>
+    <div class="section-card_buffer">
+      <section class="section-card">
+        <div class="section-card_inner">
+          <h2 id="connect">Connect</h2>
+          <p>
+            You can find me as <strong>@danlechambre</strong> in most places or you
+            can email me if that's your bag as much as mine
+          </p>
+          <ul>
+            {
+              Object.values(connectMethods).map((c) => (
+                <li>
+                  <a href={c.url}>{c.label}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</Shell>
+
+<script>
+  function setAvailabilityText() {
+    const availabilityEl = document.querySelector<HTMLElement>(
+      "[data-availability]",
+    );
+
+    if (!availabilityEl?.dataset.availability) {
+      return;
+    }
+
+    const availabilityDate = new Date(availabilityEl.dataset.availability);
+    const today = new Date();
+
+    if (availabilityDate > today) {
+      return;
+    }
+
+    availabilityEl.textContent = `I'm currently available for hire`;
+  }
+
+  setAvailabilityText();
+</script>
