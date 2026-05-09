@@ -159,6 +159,46 @@ li::marker {
   }
 }
 
+footer {
+  color: var(--color-yellow-98);
+  background-color: var(--color-blue-38);
+  font-family: var(--font-sans);
+  padding: var(--space-s);
+  padding-top: calc(var(--space-s) + 4px);
+}
+
+footer a {
+  font-weight: 800;
+  text-decoration-color: var(--color-yellow-98);
+  text-underline-offset: 0.2rem;
+}
+
+.footer-links {
+  margin-block-end: var(--space-s);
+  display: flex;
+  gap: var(--space-xs);
+}
+
+@media (min-width: 900px) {
+  footer {
+    padding-top: calc(var(--space-s) + 6px);
+  }
+}
+
+.footer-heading {
+  font-size: var(--text-size-2);
+  font-weight: 900;
+  margin-block-end: var(--space-2xs);
+}
+
+.footer-heading > span {
+  color: var(--color-blue-66);
+}
+
+.smallprint {
+  font-size: var(--text-size--1);
+}
+
 /* ---------- */
 
 /* --------------- */
