@@ -11,11 +11,11 @@ export const connectMethods: Record<ConnectMethodKey, ConnectMethod> = {
     url: "mailto:hi@danchambers.dev",
   },
   github: {
-    label: "GitHub",
+    label: "github.com/danlechambre",
     url: "https://github.com/danlechambre",
   },
   linkedin: {
-    label: "Linked In",
+    label: "linkedin.com/in/danlechambre",
     url: "https://www.linkedin.com/in/danlechambre/",
   },
   bluesky: {
