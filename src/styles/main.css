@@ -596,7 +596,8 @@ h4 {
     overflow-y: unset;
   }
 
-  #banner {
+  #banner,
+  #site-footer {
     display: none;
   }
 
