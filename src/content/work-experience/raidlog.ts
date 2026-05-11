@@ -48,7 +48,7 @@ The Lexical integration for our timeline feature was the one place I deliberatel
 The thread across all of these decisions was making the choices that served the product's stage and the client's goals. The job was to ship something that worked quickly, that could be built upon well into the future.
       `,
       cvBullet:
-        "Owned frontend architecture taking app from start through to launch making pragmatic tooling and architectural decisions (React Query, Zustand, MUI, thin API layer) to meet conflicting goals of velocity and maintainability. Shipped for demo at PMI Global Summit 2022, securing first enterprise customer and paid subscribers.",
+        "Took a greenfield React app from zero to launch on a tight timeline, choosing a deliberately light stack (thin API, React Query + Yup, Zustand, MUI) to ship fast with an eye on future scalability. Demo at PMI Global Summit 2022 led to our first enterprise customer.",
     },
     {
       title: "AI Risk Assistant",
@@ -62,7 +62,7 @@ These early models were unpredictable so we created a defensive layering pattern
 The feature shipped and to my knowledge remains in production as part of the Enterprise tier. At the time it felt like magic, a user could write a few sentences about their project and the system would populate itself saving them hours of work. The patterns I used here, particularly schema validation as the trust boundary between an LLM and UI, are ones I've used in similar work since (thankfully we now have the tooling that makes this *much* easier). The key thing at the time, as it is today, was to design the system to fail gracefully rather tha catastrophically when the models misbehave.
       `,
       cvBullet:
-        "Built and shipped an AI-powered Risk Generator using the OpenAI API in 2022, before mainstream LLM tooling and patterns existed, using Yup schema validation at the LLM/UI boundary to manage graceful degradation of structured data output. Still in production today in the product's Enterprise tier",
+        "Built an AI-powered Risk Generator using the OpenAI API in 2022, before mainstream LLM tooling and patterns existed, using Yup schema validation at the LLM/UI boundary to gracefully degrade structured output. Still in production today in the product's Enterprise tier",
     },
     {
       title: "Establishing Engineering Process",
@@ -74,7 +74,7 @@ The existing team were receptive to resolving this tension, most never having wo
 Our goal was always to provide just enough structure to make decisions, and to facilitate conversations about scope and delivery. As the PM grew in confidence they took ownership of the processes and made them their own, in the meantime it made our jobs of delivering on the project in line with expectations much easier.
       `,
       cvBullet: `
-Established lightweight engineering process from scratch working with the PM (GitHub Issues, Milestones, Kanban), turning tense "when will it ship?" conversations into structured sprint planning sessions, supporting delivery across time-zones.
+Established lightweight engineering process with the PM (GitHub Issues, Milestones, Kanban), turning tense "when will it ship?" conversations into structured sprint planning, supporting cross-timezone delivery.
       `,
     },
     {

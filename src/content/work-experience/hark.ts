@@ -45,7 +45,7 @@ In the UI itself, maintaining a container/view split in most cases meant I could
 The devil being in the detail, the challenge was holding all of this in mind at once, deciding when to push work up or downstream, employing selective memoization, breaking out frequently updated components from long-lived ones, but not going so far as to over abstract and increase maintenance. The judgement was being able to take current work in context with future work, as well as considering the type of scale and use a feature was likely to see, to forecast where the next bottleneck was likely to arise.
         `,
       cvBullet: `
-Built data-dense analytics dashboards, presenting thousands of data points across hundreds of assets. Shaping data within a typed BFF, utilising performance patterns in the UI such as concurrent fetching and single pass processing, doing work in the right place so neither the backend nor the browser becomes a bottleneck.
+Built data-dense analytics dashboards rendering thousands of data points across hundreds of assets using a type-safe Node BFF and React UI, with concurrent fetching, single-pass processing, and caching to keep server and client responsive.
           `,
     },
     {
@@ -95,17 +95,16 @@ A production-ready generative UI feature needed to hit two marks. It needed to b
 
 What I wanted to put in front of the team was a demonstration that the very things assumed to be challenging to build around were exactly the pieces that enabled AI features in production.
         `,
-      cvBullet: `Prototyped a production-shaped generative-UI feature (an LLM composing dashboards from a typed component registry within the BFF) demonstrating how AI features could ship into the existing platform.`,
-    },
-    {
-      title: "Frontend Engineering Rigour",
-      cvBullet:
-        "Fostered a culture of frontend engineering rigour within a full-stack team, embedding compositional thinking, consistent abstraction, and design integration, resulting in consistent, scalable UI.",
+      cvBullet: `Prototyped a generative-UI feature where an LLM composed dashboards from a typed component registry in the BFF, showing a viable path to shipping AI features into a mature platform.`,
     },
     {
       title: "Complex Enterprise Delivery",
       cvBullet:
-        "Led complex enterprise delivery, translating incomplete requirements into scoped solutions, making pragmatic trade-offs, balancing speed and technical debt as necessary.",
+        "Scoped and delivered a key feature for a FTSE 250 client on a commercially critical timeline, protecting a strategically important relationship.",
+    },
+    {
+      title: "Frontend Engineering Rigour",
+      cvBullet: `Raised the level of frontend rigour within a full-stack team through code review (emphasising "why" over "what") and steering planning toward existing patterns over novel solutions, compounding consistency over time.`,
     },
   ],
 };

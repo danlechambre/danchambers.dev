@@ -28,7 +28,7 @@ To solve this, the app was built as a React web application shipped inside a Xam
 It went live in booth app stores on schedule and deployed to the web shortly after.
       `,
       cvBullet:
-        "Built a Patient Reported Outcome Measures (PROMs) app for a client partnered with major UK cancer charities. Shipped as a single React codebase running natively via Xamarin WebView and on the web. Built in plain JavaScript with minimal dependencies for rapid delivery and low maintenance.",
+        "Built a Patient Reported Outcome Measures (PROMs) app for a client partnered with major UK cancer charities. Shipped as a single React codebase running natively via Xamarin WebView and on the web, using plain JavaScript with minimal dependencies for rapid delivery and low maintenance.",
     },
     {
       title: "WCAG 2.1 Level AA Compliance",

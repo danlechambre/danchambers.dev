@@ -64,12 +64,12 @@ In response to this challenge I implemented an LLM driven 'Content Editor'. Usin
 This significantly reduced the workload associated with content operations and is now mostly the process of human review and approval of AI output.
       `,
       cvBullet:
-        "Extended the platform with Cloudflare Workers-powered capabilities including LLM assisted content auditing and on-demand deployment, going beyond the initial brief to build operational resilience.",
+        "Extended the platform with Cloudflare Workers-powered capabilities including LLM assisted content auditing and on-demand deployment, adding operational resilience and cost efficiency.",
     },
     {
       title: "Operational Sustainability",
       cvBullet:
-        "Produced a full operational plan outlining requirements for ongoing development, content operations, maintenance and ongoing costs, enabling project lead to solidly pitch to donors and operational partners.",
+        "Produced an operational plan covering future development, content ops, maintenance and costs, giving the project lead a concrete pitch for donors and partners.",
     },
   ],
 };
