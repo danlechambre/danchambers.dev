@@ -1,6 +1,8 @@
+import { cometExperience } from "./comet";
 import { harkWorkExperience } from "./hark";
 import { raidlogWorkExperience } from "./raidlog";
 import { styleTechWorkExperience } from "./styletech";
+import { uohExperience } from "./uoh";
 import { wgmWorkExperience } from "./wgm";
 
 type WorkHighlight = {
@@ -29,4 +31,9 @@ export const workExperienceData: WorkExperienceEntry[] = [
   wgmWorkExperience,
   raidlogWorkExperience,
   styleTechWorkExperience,
+];
+
+export const earlyCareerData: WorkExperienceEntry[] = [
+  uohExperience,
+  cometExperience,
 ];

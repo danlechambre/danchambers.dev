@@ -32,23 +32,6 @@ This judgement was possible because I was able to combine my knowledge of the to
       `,
   highlights: [
     {
-      title: "Performance Oriented Data-dense Analytics Interfaces",
-      description: `
-The Explorer module (and several others I worked on) contained data-dense interfaces such as dashboards combining tables, charts and real-time readings, pulled from a set of generic platform services, processed and served via a backend-for-frontend (BFF) before being sent to the browser.
-
-The recurring engineering problem within the existing architecture given data containing thousands of data points across hundreds of assets, was doing the work in the right place in the stack, preventing the backend from being hammered whilst also not grinding the browser to a halt.
-
-This usually required me to collect together all data required by a specific UI across backend services into the BFF, iterating over it a single time, and shaping the UI response using lookup tables, sets and maps, with tRPC and Zod handling contracts at both boundaries. This meant that the BFF could serve data in the general shape the UI needed without having to do all of this work in the browser.
-
-In the UI itself, maintaining a container/view split in most cases meant I could have the container orchestrate and make any further transformations it needed to feed multiple child views, for example processing a single large dataset for use in both chart and tabular format.
-
-The devil being in the detail, the challenge was holding all of this in mind at once, deciding when to push work up or downstream, employing selective memoization, breaking out frequently updated components from long-lived ones, but not going so far as to over abstract and increase maintenance. The judgement was being able to take current work in context with future work, as well as considering the type of scale and use a feature was likely to see, to forecast where the next bottleneck was likely to arise.
-        `,
-      cvBullet: `
-Built data-dense analytics dashboards rendering thousands of data points across hundreds of assets using a type-safe Node BFF and React UI, with concurrent fetching, single-pass processing, and caching to keep server and client responsive.
-          `,
-    },
-    {
       title: "Design-to-code Architecture",
       description: `
 When I was assigned to work on a new product under the SolarEdge ONE for C&I umbrella, I was keen to avoid the same process issues I'd seen between design and engineering that slowed work on our main platform. Issues such as drift between design snapshots and live designs, and lack of synchronicity between our components in code and the corresponding ones in Figma. Our designer was already well underway with design work, but I proposed building the design system together, from the start, rather than trying to retrofit later.
@@ -96,6 +79,23 @@ A production-ready generative UI feature needed to hit two marks. It needed to b
 What I wanted to put in front of the team was a demonstration that the very things assumed to be challenging to build around were exactly the pieces that enabled AI features in production.
         `,
       cvBullet: `Prototyped a generative-UI feature where an LLM composed dashboards from a typed component registry in the BFF, showing a viable path to shipping AI features into a mature platform.`,
+    },
+    {
+      title: "Performance Oriented Data-dense Analytics Interfaces",
+      description: `
+The Explorer module (and several others I worked on) contained data-dense interfaces such as dashboards combining tables, charts and real-time readings, pulled from a set of generic platform services, processed and served via a backend-for-frontend (BFF) before being sent to the browser.
+
+The recurring engineering problem within the existing architecture given data containing thousands of data points across hundreds of assets, was doing the work in the right place in the stack, preventing the backend from being hammered whilst also not grinding the browser to a halt.
+
+This usually required me to collect together all data required by a specific UI across backend services into the BFF, iterating over it a single time, and shaping the UI response using lookup tables, sets and maps, with tRPC and Zod handling contracts at both boundaries. This meant that the BFF could serve data in the general shape the UI needed without having to do all of this work in the browser.
+
+In the UI itself, maintaining a container/view split in most cases meant I could have the container orchestrate and make any further transformations it needed to feed multiple child views, for example processing a single large dataset for use in both chart and tabular format.
+
+The devil being in the detail, the challenge was holding all of this in mind at once, deciding when to push work up or downstream, employing selective memoization, breaking out frequently updated components from long-lived ones, but not going so far as to over abstract and increase maintenance. The judgement was being able to take current work in context with future work, as well as considering the type of scale and use a feature was likely to see, to forecast where the next bottleneck was likely to arise.
+        `,
+      cvBullet: `
+Built data-dense analytics dashboards rendering thousands of data points across hundreds of assets using a type-safe Node BFF and React UI, with concurrent fetching, single-pass processing, and caching to keep server and client responsive.
+          `,
     },
     {
       title: "Complex Enterprise Delivery",

@@ -1,11 +1,15 @@
 ---
 import { marked } from "marked";
 
+import { getDateText } from "../utils";
+
 import Shell from "../components/Shell.astro";
 
 import { aboutContent } from "../content/about.ts";
-import { workExperienceData } from "../content/work-experience/work-experience";
-import { getDateText } from "../utils";
+import {
+  earlyCareerData,
+  workExperienceData,
+} from "../content/work-experience/work-experience";
 import { skills } from "../content/skills";
 import { connectMethods } from "../content/connect";
 
@@ -90,6 +94,27 @@ const { bluesky, ...cMethods } = connectMethods;
             <li>{h.cvBullet}</li>
           ))}
         </ul>
+      </>
+    ))
+  }
+  <h2>Earlier Career</h2>
+  {
+    earlyCareerData.map((xp) => (
+      <>
+        <h3>
+          {xp.role}
+          {"at "}
+          <a href={xp.company.url} rel="nofollow noreferrer">
+            {xp.company.name}
+          </a>
+        </h3>
+        <p class="subheading">
+          {getDateText(xp.startDate, localeOptions)}
+          {" - "}
+          {xp.endDate ? getDateText(xp.endDate, localeOptions) : "Present"}
+          {xp.note ? `(${xp.note})` : null}
+        </p>
+        <Fragment set:html={marked.parse(xp.description)} />
       </>
     ))
   }
