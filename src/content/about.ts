@@ -9,7 +9,7 @@ I operate best in teams that value humility, creativity, and quality when buildi
   cv: `
 Experienced **Frontend Engineer** who's delivered websites and applications for startups, scale-ups and enterprise, spanning industrial IoT, healthcare, retail and beyond.
 
-With nearly twenty years in other roles, I take a user's-eye view, and focus on delivering experiences that are accessible, blazingly fast, and a joy to use. I care about how interfaces feel, not just how they're built, and I'm happiest where design and engineering intersect.
+Having spent nearly twenty years in a variety of roles prior to engineering, I take a user's-eye view, and focus on delivering experiences that are accessible, blazingly fast, and a joy to use. I care about how interfaces feel, not just how they're built, and I'm happiest where design and engineering intersect.
 
 Looking to join a team that values humility, creativity, and quality when building the web.
   `,
