@@ -8,7 +8,7 @@ export const skills: Array<Skill> = [
     groupTitle: "Focus",
     skills: [
       "design-engineering",
-      "interaction quality",
+      "high quality interaction",
       "accessibility",
       "AI-augmented UI development",
     ],

@@ -10,7 +10,7 @@ export const wgmWorkExperience: WorkExperienceEntry = {
   },
   role: "Lead Developer",
   startDate: "2023-01",
-  endDate: "2026-04",
+  endDate: "2026-05",
   note: "part-time, freelance",
   description: `
 I originally joined the Why Grief Matters project to help realise their goal of turning the project into a fully realised website. Initially working on a voluntary basis, working from preliminary designs, I built out the foundations of the platform for them to build upon further once further funding had been secured.
