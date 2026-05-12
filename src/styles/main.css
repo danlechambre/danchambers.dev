@@ -145,6 +145,7 @@ body {
 a {
   color: currentColor;
   text-decoration-color: var(--color-orange);
+  text-underline-offset: 0.15rem;
 }
 
 li::marker {
@@ -716,6 +717,7 @@ h4 {
   /* Page Breaks */
   /* ----------- */
   /* Prevent a page break right after an experience heading or subheading */
+  h2,
   h3,
   .subheading {
     break-after: avoid;
