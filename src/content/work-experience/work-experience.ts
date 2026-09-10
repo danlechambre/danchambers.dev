@@ -3,6 +3,7 @@ import { harkWorkExperience } from "./hark";
 import { raidlogWorkExperience } from "./raidlog";
 import { styleTechWorkExperience } from "./styletech";
 import { uohExperience } from "./uoh";
+import { vafoDigitalExperience } from "./vafo-digital";
 import { wgmWorkExperience } from "./wgm";
 
 type WorkHighlight = {
@@ -27,6 +28,7 @@ export type WorkExperienceEntry = {
 };
 
 export const workExperienceData: WorkExperienceEntry[] = [
+  vafoDigitalExperience,
   harkWorkExperience,
   wgmWorkExperience,
   raidlogWorkExperience,
